@@ -1,12 +1,5 @@
 import React from 'react';
 
-function checkIt() {
-    if (this.state.completed) {
-        this.setState({completed:false})
-    } else {
-        this.setState({completed:true})
-    }
-}
 class Checkbox extends React.Component {
     constructor(props){
         super(props);
@@ -14,9 +7,16 @@ class Checkbox extends React.Component {
             completed: this.props.completed,
         }
     }
+    checkIt() {
+        if (this.state.completed) {
+            this.setState({completed:false})
+        } else {
+            this.setState({completed:true})
+        }
+    }
     render(){
         return(
-                <button className="checkbox icon" onClick={checkIt.bind(this)}>
+                <button className="checkbox icon" onClick={() => this.checkIt()}>
                     <i className="material-icons">
                         {this.state.completed? 'check_box' : 'check_box_outline_blank'}
                     </i>
@@ -28,8 +28,5 @@ class Checkbox extends React.Component {
 Checkbox.propTypes = {
     completed: React.PropTypes.bool.isRequired,
 }
-// Checkbox.defaultProps = {
-//     completed: false,
-// }
 
 export default Checkbox;

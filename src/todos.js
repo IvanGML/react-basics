@@ -9,7 +9,7 @@ const todos = [
     },
     {
         title: 'Default shit',
-        completed: false
+        completed: true
     },
     {
         title: 'Default shit',

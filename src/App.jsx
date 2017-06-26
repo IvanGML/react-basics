@@ -7,12 +7,22 @@ import Todo from './components/Todo'
 
 
 class App extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            todos: this.props.initialData,
+        }
+    }
     render(){
         return(
             <main>
                 <Header title={'ToDo LIST'}/>
                 <section className="todo-list">
-                    {todos.map((item, index)=> <Todo key={index} todo={item.title} completed={item.completed} />)}
+                    {this.state.todos.map((item, index)=> 
+                        <Todo key={index}
+                              todo={item.title}
+                              completed={item.completed} />
+                    )}
                 </section>
             </main>
         );
@@ -28,6 +38,6 @@ App.propTypes = {
 }
 
 ReactDOM.render(
-    <App todos={todos} />,
+    <App initialData={todos} />,
     document.getElementById('root')
 )

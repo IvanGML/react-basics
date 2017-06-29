@@ -2,7 +2,7 @@ import React from 'react';
 
 const Checkbox = props => {
 
-    // checkIt() {
+    // statusChange() {
     //     if (this.state.completed) {
     //         this.setState({completed:false})
     //     } else {
@@ -11,7 +11,7 @@ const Checkbox = props => {
     // }
     // render(){
         return(
-                <button className="checkbox icon">
+                <button className="checkbox icon" onClick={props.statusChange}>
                     <i className="material-icons">
                         {props.completed? 'check_box' : 'check_box_outline_blank'}
                     </i>
@@ -22,6 +22,7 @@ const Checkbox = props => {
 
 Checkbox.propTypes = {
     completed: React.PropTypes.bool.isRequired,
+    statusChange: React.PropTypes.func.isRequired,
 }
 
 export default Checkbox;

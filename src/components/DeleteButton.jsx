@@ -2,20 +2,25 @@ import React from 'react';
 
 const DeleteButton = (props) => {
     return(
-            <button className={props.title + " icon"} onClick={props.deleteTodo}>
-                <i className="material-icons">
-                    {props.title}
-                </i>
+            <button className={props.className} onClick={props.deleteTodo} {...props}>
+                {
+                    props.icon ?
+                        <i className="material-icons">
+                            {props.icon}
+                        </i>
+                        :
+                        props.children
+                }
             </button>
     );
 }
 
 DeleteButton.propTypes = {
-    title: React.PropTypes.string.isRequired,
-    deleteTodo: React.PropTypes.func.isRequired,
+    icon: React.PropTypes.string,
+    title: React.PropTypes.string,
+    deleteTodo: React.PropTypes.func,
+    children: React.PropTypes.node,
 }
-DeleteButton.defaultProps = {
-    title: 'delete',
-}
+
 
 export default DeleteButton;

@@ -7,7 +7,7 @@ const Todo = props =>
         <div className={`todo${props.completed ? ' completed' : ''}`}>
             <Checkbox completed={props.completed} statusChange={() => props.statusChange(props.id)}/>
             <span className="todo-title">{props.todo}</span>
-            <DeleteButton title="delete" deleteTodo={()=>props.deleteTodo(props.id)} />
+            <DeleteButton icon="delete icon" className="delete icon" deleteTodo={()=>props.deleteTodo(props.id)} />
         </div>;
 
 Todo.propTypes = {

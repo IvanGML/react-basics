@@ -1,6 +1,6 @@
 const todos = [
     {
-        id: 8,
+        id: 0,
         title: 'Defaul todo\'s',
         completed: false
     },
@@ -14,31 +14,6 @@ const todos = [
         title: 'Default shit',
         completed: true
     },
-    {
-        id: 3,
-        title: 'Default shit',
-        completed: false
-    },
-    {
-        id: 4,
-        title: 'Default shit',
-        completed: false
-    },
-    {
-        id: 5,
-        title: 'Default shit',
-        completed: false
-    },
-    {
-        id: 6,
-        title: 'Default shit',
-        completed: false
-    },
-    {
-        id: 7,
-        title: 'Default shit',
-        completed: false
-    }
 ]
 
 export default todos;

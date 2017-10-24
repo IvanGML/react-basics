@@ -14,7 +14,8 @@ class Todo extends React.Component {
         // this.save = this.save.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-    ;(e) {
+    ;
+    handleSubmit(e) {
         e.preventDefault();
         let title = this.refs.title.value;
         this.props.onEdit(this.props.id, title);

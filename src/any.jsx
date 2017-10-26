@@ -5,7 +5,6 @@ class Mainn extends React.Component {
     render() {
         return(
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, inventore!</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, ratione.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, unde?</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, voluptatum.</p>

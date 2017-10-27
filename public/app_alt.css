@@ -1,0 +1,51 @@
+* {
+   font: normal 16px "Arial";
+}
+
+.todo {
+   width: 600px;
+   margin: 20px auto;
+}
+
+.todo_header {
+   background-color: #c22929;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+.todo_headline {
+   text-align: center;
+   font-weight: bold;
+   text-transform: uppercase;
+   color: white;
+}
+
+.todo_item {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 20px 10px 20px 0;
+   border-bottom: 1px solid gray;
+}
+
+.todo_item > *{
+   margin-left: 20px;
+}
+
+.todo_checkbox {
+   height: 30px;
+   width: 30px;
+}
+
+.todo_discription {
+
+}
+
+.todo_button {
+   margin-left: auto;
+}
+
+.checkbox {
+   width: 30px;
+   height: 30px;
+}

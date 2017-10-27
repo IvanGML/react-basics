@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/any.jsx',
+    entry: './src/App_alt.jsx',
 
     output: {
         filename: 'bundle.js',

@@ -9,7 +9,7 @@ function Checkbox(props) {
 
    return(
       <input 
-         className="todo_checkbox" 
+         className="todo__checkbox" 
          type="checkbox" 
          checked={props.completed}
          onChange={props.handleClick}

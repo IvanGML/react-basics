@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import todos from './todos_alt';
 import Header from './components_alt/Header';
 import Item from './components_alt/Item';
-import todos from './todos_alt';
+import Form from './components_alt/Form';
 
 class Main extends React.Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class Main extends React.Component {
             todos,
             stateOfCheckbox: false
         };
+        this.onAdd = this.onAdd.bind(this);
     }
 
     handleClick(id) {
@@ -33,6 +35,17 @@ class Main extends React.Component {
         });
     }
 
+    onAdd(newTitle) {
+        let newToDo = {
+            id: this.state.todos[this.state.todos.length-1].id+1,
+            discription: newTitle,
+            completed: false
+        }
+        let todos = this.state.todos;
+        todos.push(newToDo);
+        this.setState({ todos })
+    }
+
     render() {
         return(
             <section className="todo">
@@ -48,6 +61,7 @@ class Main extends React.Component {
                         />)
                     }
                 </main>
+                <Form onAdd={this.onAdd}/>
             </section>
         );
     }

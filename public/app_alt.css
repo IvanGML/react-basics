@@ -7,20 +7,21 @@
    margin: 20px auto;
 }
 
-.todo_header {
+.todo__header {
    background-color: #c22929;
    padding-top: 20px;
    padding-bottom: 20px;
 }
 
-.todo_headline {
+.todo__headline {
    text-align: center;
    font-weight: bold;
    text-transform: uppercase;
    color: white;
 }
 
-.todo_item {
+.todo__item,
+.todo__add {
    display: flex;
    justify-content: space-around;
    align-items: center;
@@ -28,20 +29,23 @@
    border-bottom: 1px solid gray;
 }
 
-.todo_item > *{
+.todo__item > *,
+.todo__add > *{
    margin-left: 20px;
+   margin-top: 10px;
+   margin-bottom: 10px;
 }
 
-.todo_checkbox {
+.todo__checkbox {
    height: 30px;
    width: 30px;
 }
 
-.todo_discription {
+.todo__discription {
 
 }
 
-.todo_button {
+.todo__button {
    margin-left: auto;
 }
 

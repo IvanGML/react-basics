@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Header = props => 
-   <header className="todo_header">
-      <h1 className="todo_headline">
+   <header className="todo__header">
+      <h1 className="todo__headline">
          {props.title}
       </h1>
    </header>
